@@ -1,0 +1,67 @@
+{
+    "layer": "top",
+    "height": 40,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/weather","clock"],
+    "modules-right": ["network","bluetooth","pulseaudio","backlight","battery","custom/wlogout"],
+
+    "clock": {
+	"format": " {:%H:%M}",
+    },
+    
+    "hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+	    "1" : "󰊠 ",
+	    "2" : "󰊠 ",
+	    "3" : "󰊠 ",
+	    "4" : "󰊠 ",
+	    "5" : "󰊠 ",
+	    "active": "󰮯 ",
+	    "default": "󰊠",
+	},
+	"persistent-workspaces": {
+             "1": [],	
+	     "2": [],
+	     "3": [],
+	     "4": [],
+	     "5": [],
+	},
+    },
+    "custom/weather": {
+	"format": "{}°",
+	"tooltip": true,
+	"interval": 3600,
+	"exec": "wttrbar --location ho+chi+minh",
+	"return-type": "json"
+    },
+    "pulseaudio": {
+	"format": "{icon}",
+	"format-bluetooth": "{icon}{volumn}",
+	"format-muted": "󰝟 ",
+	"format-icons": {
+	    "headphone": " ",
+	    "default": ["", " "]
+	},
+	"scroll-step": 1,
+	"on-click": "pavucontrol",
+    },
+    "backlight": {
+	"format": "{icon}",
+	"format-icons": ["󱩎 ","󱩒 ","󰛨 "]
+    },
+    "network": {
+	"format": " ",
+    },
+    "bluetooth": {
+	"format": "󰂯",
+    },
+    "battery": {
+	"format": "󰁹"
+    },
+    "custom/wlogout": {
+	"format": " ",
+	"on-click": "wlogout",
+    },
+}
