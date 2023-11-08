@@ -1,3 +1,4 @@
+--Plugin Manager follke/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -10,12 +11,13 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
---Plugin Manager wbthomason/packer.nvim
 
 --LSP 
-"neovim/nvim-lspconfig",
+"neovim/nvim-lspconfig", 
+
+--LSP Icons
+"onsails/lspkind.nvim", 
 
 --LSP Install
 "williamboman/mason.nvim",

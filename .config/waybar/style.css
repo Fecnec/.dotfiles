@@ -43,7 +43,7 @@
 }
 
 window#waybar {
-    background: rgba(1,1,1,0);
+    background: transparent;
 }
 tooltip {
     background: transparent;
@@ -51,19 +51,32 @@ tooltip {
 }
 tooltip label {
     background: @base;
-    border: 5px solid @mauve;
+    border: 2px solid @rosewater;
+    border-radius: 2px;
     font-family: "CaskaydiaCove Nerd Font";
     font-size: 16px;
 }
 
+.modules-left {
+    margin-left: 10px;
+}
+#custom-archlinux {
+    background: @base;
+    border-radius: 0 0 10px 10px;
+    color: @blue;
+    padding: 0 5px 0 8px;
+}
 #workspaces {
     background: @base;
-    padding-left: 10px;
-    margin-left: 20px;
     border-radius: 0 0 10px 10px;
+    margin-left: 10px;
 }
 #workspaces button {
     color: @sky;
+}
+#workspaces button:hover {
+    background: none;
+    border: none
 }
 #workspaces button.active {
     color: @yellow;
@@ -77,14 +90,14 @@ tooltip label {
 #custom-weather {
     color: @rosewater;
     background: @surface0;
-    margin: 8px 0 8px 0;
+    margin: 5px 0px 5px 10px;
     padding: 0 5px;
     border-radius: 10px;
 }
 #clock {
     color: @flamingo;
     background: @surface0;
-    margin: 8px 0 8px 10px;
+    margin: 5px 0;
     padding: 0 5px;
     border-radius: 10px;
 
@@ -92,7 +105,7 @@ tooltip label {
 
 .modules-right {
     background: @base;
-    margin: 0 20px 0 0;
+    margin: 0 10px 0 0;
     padding-left: 10px;
     border-radius: 0 0 10px 10px;
 }
@@ -100,27 +113,27 @@ tooltip label {
     color: @yellow;
     background: @surface0;
     border-radius: 10px 0 0 10px;
-    margin: 8px 0 8px 0;
+    margin: 5px 0;
     padding: 0 5px 0 10px;
 }
 #bluetooth {
     color: @blue;
     background: @surface0;
     border-radius: 0 10px 10px 0;
-    margin: 8px 10px 8px 0;
+    margin: 5px 10px 5px 0;
     padding: 0 10px 0 5px;
 }
 #pulseaudio {
     color: @mauve;
     background: @surface0;
     border-radius: 10px 0 0 10px;
-    margin: 8px 0 8px 10px;
+    margin: 5px 0 5px 10px;
     padding: 0 5px 0 10px;
 }
 #backlight {
     color: @sky;
     background: @surface0;
-    margin: 8px 0 8px 0;
+    margin: 5px 0;
     padding: 0 5px 0 5px;
 }
 #battery {
@@ -128,9 +141,18 @@ tooltip label {
     background: @surface0;
     border-radius: 0 10px 10px 0;
     padding: 0 10px 0 5px;   
-    margin: 8px 10px 8px 0;
+    margin: 5px 10px 5px 0;
+}
+#battery.medium {
+    color: @yellow;
+}
+#battery.warning {
+    color: @maroon;
+}
+#battery.critical {
+    color: @red;
 }
 #custom-wlogout {
     color: @red;
-    margin: 0 10px 0 10px;
+    margin: 0 5px;
 }
