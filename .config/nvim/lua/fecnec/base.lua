@@ -1,7 +1,7 @@
 -- Default Settings --
 --vim.opt.guicursor = ""
 
-vim.opt.nu = true
+vim.wo.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 2

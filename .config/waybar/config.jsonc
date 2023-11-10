@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+  "layer": "top",
     "height": 36,
 
     "modules-left": ["custom/archlinux","hyprland/workspaces"],
